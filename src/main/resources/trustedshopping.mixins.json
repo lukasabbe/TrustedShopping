@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.lukasabbe.trustedshopping.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+  ],
+  "client": [
+    "client.ChestScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
