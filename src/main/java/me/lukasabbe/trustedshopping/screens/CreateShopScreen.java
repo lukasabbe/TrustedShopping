@@ -1,5 +1,6 @@
 package me.lukasabbe.trustedshopping.screens;
 
+import me.lukasabbe.trustedshopping.util.ItemTextFieldWidget;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
@@ -26,10 +27,11 @@ public class CreateShopScreen extends Screen {
         final Window window = MinecraftClient.getInstance().getWindow();
         int width = window.getScaledWidth();
         int height = window.getScaledHeight();
+
         addDrawable(
                 new TextWidget(
                         (width / 2) - 100,
-                        10,
+                        15,
                         200,
                         15,
                         Text.translatable("trustedshopping.screen.name.widget"),
@@ -43,7 +45,22 @@ public class CreateShopScreen extends Screen {
         addDrawableChild(nameWidget);
         nameWidget.setEditable(true);
 
+        addDrawable(
+                new TextWidget(
+                        (width / 2) - 150,
+                        45,
+                        300,
+                        15,
+                        Text.translatable("trustedshopping.screen.item.widget"),
+                        textRenderer)
+        );
 
+        ItemTextFieldWidget itemTextFieldWidget = new ItemTextFieldWidget(this.textRenderer, (width / 2) - 50, 60, 100, 15, Text.literal("Test"));
+        itemTextFieldWidget.setFocusUnlocked(true);
+        itemTextFieldWidget.setDrawsBackground(true);
+        itemTextFieldWidget.setMaxLength(30);
+        addDrawableChild(itemTextFieldWidget);
+        itemTextFieldWidget.setEditable(true);
     }
 
     @Override

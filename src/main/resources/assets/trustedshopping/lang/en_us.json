@@ -1,5 +1,6 @@
 {
   "trustedshopping.screen.title.create": "Create a shop",
   "trustedshopping.container.button_create": "Create shop",
-  "trustedshopping.screen.name.widget": "Write the name of the shop"
+  "trustedshopping.screen.name.widget": "Write the name of the shop",
+  "trustedshopping.screen.item.widget": "The item you want to sell. Write the items id."
 }
